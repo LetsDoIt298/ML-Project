@@ -63,6 +63,7 @@
             Push all the codes in Github:-
                                         git add .
                                         git status
+                                        git commit -am "third commit"
                                         git push -u origib main
 
 
