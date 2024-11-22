@@ -1,0 +1,68 @@
+## 1st step:-
+            create a virtual env:-
+                                    conda create -p venv python==3.11 -y
+            Activate:-
+                        conda activate venv/
+            
+
+## 2nd Step:-
+            Create 'README.md' file in VS code
+            initiate git and push it to github:-
+                                                git init
+                                                git add README.md
+                                                git add -m "first commit"
+                                                git branch -M main
+                                                git remote add origin https://github.com/LetsDoIt298/ML-Project.git
+                                                git push -u origin master
+
+## 3rd Step:-
+            Create '.gitignore' file in github:-    
+                                                Open folder where github project is located, in github
+                                                Click on 'Add file' -> 'create new file'
+                                                Inside name of your file enter '.gitignore'
+                                                From '.gitignore template' search 'Python' then comit changes
+
+## 4th Step:-
+            Get data from Github to persnal pc:-
+                                                Open VS code, in termina enter 'git pull'
+            Create new folder 'srs', inside create a file '__init__.py'
+            create 'requirements.txt':-
+                                        Enter all the required libraries
+                                        In the end enter '-e .'
+            Create 'setup.py' file and enter:-
+                                            from setuptools import find_packages, setup
+                                            from typing import List
+
+                                            hype_e_dot='-e .'
+                                            def get_requirements(file_path:str)->List[str]:
+                                                '''
+                                                This function will return list of requirements
+                                                '''
+                                                requirements=[]
+                                                with open(file_path) as file_obj:
+                                                    requirements=file_obj.readlines()
+                                                    requirements = [req.replace('\n','') for req in requirements]
+
+                                                    if hype_e_dot in requirements:
+                                                        requirements.remove(hype_e_dot)
+
+                                                    return requirements
+
+                                            setup(
+                                                name='mlproject',
+                                                version='0.0.1',
+                                                author='Alankar',
+                                                author_email='alankarsharma298@gmail.com',
+                                                packages=find_packages(),
+                                                install_requires=get_requirements('requirements.txt')
+                                            )
+
+## 5th step:-
+            Runn 'requirements.txt' file in terminal:-
+                                                    pip install -r requirements.txt
+            Push all the codes in Github:-
+                                        git add .
+                                        git status
+                                        git push -u origib main
+
+
