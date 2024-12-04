@@ -66,4 +66,24 @@
                                         git commit -am "third commit"
                                         git push -u origib main
 
+______________________________________________________________________________________________________
+## 6th step:-
+            Create a folder 'components'and create following files:-
+                                        1) __init__.py -> to import packages to some other location
+                                        2) data_ingestion.py -> Data validation,
+                                        3) data_transformation.py-> Data Transformation
+                                        4) model_trainer.py
 
+## 7th step:-
+            Create a folder 'pipeline' and create following files:-
+                                        1) __init__.py
+                                        2) train_pipeline.py
+                                        3) predict_pipeline.py 
+## 8th step:-
+            Crete following files inside 'src':-
+                                        1) exceptions.py
+                                        2) logger.py
+                                        3) utils.py -> Read data from SQL server, MongoDB..etc
+
+## 9th Step:-
+            
